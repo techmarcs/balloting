@@ -1,6 +1,5 @@
-# SpringSecurityUserDetailsService
+# Balloting Service
 
-Similiar project than https://github.com/gustavoponce7/SpringSecurityLoginTutorial but this code implements the UserDetailsService as authentication strategy.
 
 1. mvn clean
 2. mvn clean install
@@ -9,3 +8,4 @@ Similiar project than https://github.com/gustavoponce7/SpringSecurityLoginTutori
 
 - http://localhost:8080/registration
 - http://localhost:8080/login
+ 
