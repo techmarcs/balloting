@@ -39,7 +39,7 @@ public class BallotService {
     Map<String, String> emailMap = new HashMap<>();
     Random r = new Random();
     
-    @PostConstruct
+    //@PostConstruct
     private void init() throws FileNotFoundException, IOException{
         Resource resource = new ClassPathResource(OUT_FILE);
         try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))){
