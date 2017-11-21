@@ -41,28 +41,16 @@ public class BallotService {
     
     @PostConstruct
     private void init() throws FileNotFoundException, IOException{
-        Resource resource = new ClassPathResource(OUT_FILE);
-        try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))){
-           String line = br.readLine();
-            while (line != null && !line.isEmpty()) {
-                out.put(line.split("|")[0], line);
-                line = br.readLine();
-            }
-        }
-        
-        resource = new ClassPathResource(IN_FILE);
-        try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))){
-        
-           String line = br.readLine();
-           int count = 1;
-            while (line != null && !line.isEmpty()) {
-                if(out.get(line) == null){
-                    months.add(line);
-                    line = br.readLine();
-                    count++;
-                }
-            }
-        }
+        months.add("January");
+        months.add("Febuary");
+        months.add("March");
+        months.add("April");
+        months.add("May");
+        months.add("June");
+        months.add("July");
+        months.add("August");
+        months.add("September");
+        months.add("October");
     }
     
     public Ballot doBallot(Ballot ballot) throws IOException{
